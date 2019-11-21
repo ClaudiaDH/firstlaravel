@@ -1,5 +1,7 @@
 <?php
 
+//Serve para poder importar outros arquivos usando apenas o "use" - faz o papel do require/include:
+
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
