@@ -23,4 +23,26 @@ class HomeController extends Controller
 
         return view('home',["listaUsuarios"=>$listaUsuarios]);
     }
+    //O QUE VOU RECEBER É UM OBJETO CHAMADO REQUEST DA CLASSE REQUEST
+    //usando o parametro da rota aqui tambem.
+    //precisamos colocar um valor default para o parametro.
+    public function request(Request $request, $id=0){
+
+       if($id == 0){
+           echo "Passa algo ai!";
+       }else{
+           dd($id);
+           
+       }
+
+    }
+
+    public function exibirFormulario(){
+        return view('formulario');
+    }
+    public function cadastrarFormulario(Request $request){
+        //PARA VIZUALIAR OS DADOS
+        //-> nome: nome do input que quero visualizar.
+        dd($request->nome);
+    }
 }
